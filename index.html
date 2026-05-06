@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshil Khatri | Full Stack Developer</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <style>
+        :root {
+            --bg-dark: #080a12;
+            --card-bg: #111420;
+            --accent: #00d2ff;
+            --text-gray: #aaa;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #e0e0e0;
+            font-family: 'Segoe UI', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* --- Custom Cursor CSS --- */
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--accent);
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: all 0.15s ease-out;
+        }
+
+        .cursor-hover {
+            transform: translate(-50%, -50%) scale(1.5);
+            background: rgba(0, 210, 255, 0.1);
+            border-color: #fff;
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background: rgba(8, 10, 18, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-link {
+            color: #ffffff !important;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+        }
+
+        /* --- Sections --- */
+        section {
+            padding: 100px 0;
+        }
+
+        .hero-section {
+            padding: 200px 0 100px;
+            min-height: 90vh;
+        }
+
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            background: var(--accent);
+            width: 50px;
+            height: 3px;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            padding: 35px;
+            border-radius: 20px;
+            transition: 0.4s;
+            height: 100%;
+        }
+
+        .glass-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px);
+        }
+
+        .project-img {
+            height: 150px;
+            background: #1a1e2e;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .cv-btn {
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        /* Modal Glass Effect */
+        .modal-content {
+            background: rgba(17, 20, 32, 0.98) !important;
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+        }
+
+        /* Form Styling */
+        .form-control {
+            background: #080a12 !important;
+            border: 1px solid #333 !important;
+            color: white !important;
+            padding: 12px;
+        }
+    </style> -->
+
+
+</head>
+
+<body>
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold fs-3" href="#">HARSHIL<span class="text-info">.</span></a>
+
+            <button class="navbar-toggler border-0 shadow-none bg-info" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link px-3" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="Harshil_Khatri_CV.pdf" download="Harshil_Khatri_CV" class="btn btn-info px-4 fw-bold cv-btn hover-target">
+                        <i class="fas fa-file-download me-2"></i>Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+   <section id="home" class="hero-section container">
+    <div class="row align-items-center">
+        <div class="col-md-7 text-start" data-aos="fade-right">
+            <h5 class="text-info fw-bold">Hello World, I'm</h5>
+            <h1 class="display-2 fw-bold text-white">Harshil Khatri</h1>
+            <h3 class="text-secondary mt-3">A Passionate <span id="typed-text" class="text-info"></span></h3>
+            <p class="mt-4 lead text-gray fs-5">BSc Computer Science Graduate specializing in Node.js and scalable web architecture.</p>
+            <div class="mt-5">
+                <a href="#projects" class="btn btn-outline-info px-5 py-3 fw-bold cv-btn hover-target">View My Work</a>
+            </div>
+        </div>
+
+        <div class="col-md-5 text-center mt-5 mt-md-0" data-aos="fade-left">
+            <div class="hero-img-container hover-target">
+                <img src="./images/Harshil-image_-removebg-preview.png"  alt="Harshil Khatri" class="img-fluid hero-profile-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="container">
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+        <div class="glass-card" data-aos="fade-up">
+            <p class="fs-5">I am a tech enthusiast who loves to turn complex problems into simple, beautiful, and
+                intuitive designs. With a background in Computer Science (VNSGU 2024), I am currently focusing on
+                Backend technologies at Red & White Skill Education.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2 class="section-title" data-aos="fade-up">My Tech Stack</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="glass-card text-center hover-target">
+                    <i class="fas fa-code text-info fa-3x mb-3"></i>
+                    <h4>Frontend</h4>
+                    <p>HTML, CSS, Bootstrap, JavaScript</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="glass-card text-center hover-target">
+                    <i class="fas fa-server text-info fa-3x mb-3"></i>
+                    <h4>Backend</h4>
+                    <p>Node.js, Express.js, C, C++</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="glass-card text-center hover-target">
+                    <i class="fas fa-database text-info fa-3x mb-3"></i>
+                    <h4>Database & Tools</h4>
+                    <p>MongoDB, Git, GitHub, Postman</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="section-title" data-aos="fade-up">Projects</h2>
+        <div class="row g-4">
+             <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="glass-card hover-target">
+                    <div class="project-img"><img src="./images/Screenshot (69).png" alt=""></div>
+                    <h4>Musical (html-css)</h4>
+                    <p class="text-gray">A responsive musical instrument marketplace and event platform built with HTML and CSS.</p>
+                    <button class="btn btn-info w-100 fw-bold" data-bs-toggle="modal"
+                        data-bs-target="#project2Modal">View Details</button>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="glass-card hover-target">
+                    <div class="project-img"><img src="./images/home.png" alt=""></div>
+                    <h4>Health Care  (Bootstrap)</h4>
+                    <p class="text-gray">A fully responsive healthcare platform designed with Bootstrap, featuring clean UI and seamless navigation.</p>
+                    <button class="btn btn-info w-100 fw-bold" data-bs-toggle="modal"
+                        data-bs-target="#project1Modal">View Details</button>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="glass-card hover-target">
+                    <div class="project-img"><img src="./images/Screenshot (68).png" alt=""></div>
+                    <h4>Quiz App -CSS</h4>
+                    <p class="text-gray">An interactive web-based quiz application developed using JavaScript, featuring real-time score tracking and dynamic question rendering.</p>
+                    <button class="btn btn-info w-100 fw-bold" data-bs-toggle="modal"
+                        data-bs-target="#project2Modal">View Details</button>
+                </div>
+            </div>
+           
+             <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="glass-card hover-target">
+                    <div class="project-img"><img src="./images/Screenshot (71).png" alt=""></div>
+                    <h4>Dog API</h4>
+                    <p class="text-gray">A dynamic Dog Breed Gallery that fetches real-time images via REST API based on user-selected breeds.</p>
+                    <button class="btn btn-info w-100 fw-bold" data-bs-toggle="modal"
+                        data-bs-target="#project2Modal">View Details</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="modal fade" id="project1Modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Project Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Detailed overview of Node.js backend system including JWT security, MongoDB integration, and
+                        Postman testing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact" class="container">
+        <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+        <div class="row g-4">
+            <div class="col-md-5" data-aos="fade-right">
+                <div class="glass-card">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope text-info me-2"></i> harshil@email.com</p>
+                    <p><i class="fas fa-phone-alt text-info me-2"></i> +91 9499565475</p>
+                    <p><i class="fas fa-map-marker-alt text-info me-2"></i> Surat, Gujarat</p>
+                </div>
+            </div>
+            <div class="col-md-7" data-aos="fade-left">
+                <div class="glass-card">
+                    <form>
+                        <input type="text" class="form-control mb-3" placeholder="Your Name">
+                        <input type="email" class="form-control mb-3" placeholder="Your Email">
+                        <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
+                        <button class="btn btn-info w-100 fw-bold cv-btn hover-target">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <p class="text-secondary small">&copy; 2026 Harshil Khatri. Built for Success.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Typing Effect
+        new Typed('#typed-text', {
+            strings: ['Full Stack Developer', 'Node.js Specialist', 'Logic Builder'],
+            typeSpeed: 60, backSpeed: 40, loop: true
+        });
+
+        // Custom Cursor
+        const cursorDot = document.querySelector("[data-cursor-dot]");
+        const cursorOutline = document.querySelector("[data-cursor-outline]");
+        window.addEventListener("mousemove", (e) => {
+            cursorDot.style.left = `${e.clientX}px`;
+            cursorDot.style.top = `${e.clientY}px`;
+            cursorOutline.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 500, fill: "forwards" });
+        });
+
+        // Hover Effect for Cursor
+        document.querySelectorAll(".hover-target").forEach(el => {
+            el.addEventListener("mouseenter", () => cursorOutline.classList.add("cursor-hover"));
+            el.addEventListener("mouseleave", () => cursorOutline.classList.remove("cursor-hover"));
+        });
+    </script>
+</body>
+
+</html>
